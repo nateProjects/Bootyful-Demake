@@ -284,6 +284,7 @@ function deldoor()
   mset(doors[hero.lvl][dnum][1],doors[hero.lvl][dnum][2],1)
   mset(doors[hero.lvl][dnum][1],doors[hero.lvl][dnum][2]+1,0)
   mset(doors[hero.lvl][dnum][1],(doors[hero.lvl][dnum][2])+2,0)
+  hero.keyheld=0
 end
 
 function enemy_move(pisprite)
@@ -467,6 +468,7 @@ floor_tile_below = tile_at(hero.x+levels[hero.lvl][6]*8, hero.y+hero.h+levels[he
       if pilocate[hero.lvl][enemies][1]==hero.x and pilocate[hero.lvl][enemies][2]==hero.y then
         hero.lives-=1
         sfx(10)
+        wait(1)
         hero.x=levels[hero.lvl][11]
         hero.y=levels[hero.lvl][12]
       end
@@ -1481,4 +1483,3 @@ __music__
 00 08094344
 00 06074344
 00 08094344
-
