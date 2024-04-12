@@ -456,10 +456,9 @@ floor_tile_below = tile_at(hero.x+levels[hero.lvl][6]*8, hero.y+hero.h+levels[he
    or hero.y==136 or hero.y==160 or hero.y==184 or hero.y==208
     or hero.y==264 or hero.y==288 or hero.y==312 or hero.y==336
   -- dumb way fixme - but it worked - fix later?
-  ladder_d = tile_at (hero.x+hero.w-5+levels[hero.lvl][6]*8,hero.y+hero.h+levels[hero.lvl][7]*8)==2
--- was ladder_d = tile_at( hero.x+hero.w/2, hero.y+hero.h )==2
-  ladder_u = tile_at(hero.x+hero.w-5+levels[hero.lvl][6]*8,hero.y+(hero.h-1)+levels[hero.lvl][7]*8 )==2
--- was  ladder_u = tile_at( hero.x+hero.w, hero.y+hero.h-1 )==2
+-- fixed getting stuck on ladder - finally!
+  ladder_d = tile_at (hero.x+hero.w/2+levels[hero.lvl][6]*8, hero.y+hero.h+levels[hero.lvl][7]*8)==2
+  ladder_u = tile_at (hero.x+hero.w/2+levels[hero.lvl][6]*8, hero.y+hero.h-1+levels[hero.lvl][7]*8)==2
   behind = tile_at(hero.x+levels[hero.lvl][6]*8, hero.y+levels[hero.lvl][7]*8)
   -- for treasure & keys & exits?
   if cheat[2]==0 then
