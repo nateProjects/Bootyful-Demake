@@ -43,7 +43,7 @@ Most of these were not implemented due to lack of available memory and / or that
 
 ## Real bugs
 
-- Sometimes you seem to get stuck on a ladder
+- FIXED - Sometimes you seem to get stuck on a ladder
 - Sometimes you respawn after death behind a door
 - Pressing Z to reposition was introduced to address this
 
